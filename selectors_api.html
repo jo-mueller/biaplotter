@@ -448,6 +448,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biaplotter.selectors.Interactive.create_selector"><code class="docutils literal notranslate"><span class="pre">Interactive.create_selector()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biaplotter.selectors.Interactive.on_button_press"><code class="docutils literal notranslate"><span class="pre">Interactive.on_button_press()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biaplotter.selectors.Interactive.remove"><code class="docutils literal notranslate"><span class="pre">Interactive.remove()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biaplotter.selectors.Interactive.selection_applied_signal"><code class="docutils literal notranslate"><span class="pre">Interactive.selection_applied_signal</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biaplotter.selectors.Interactive.update_active_artist"><code class="docutils literal notranslate"><span class="pre">Interactive.update_active_artist()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biaplotter.selectors.Interactive.update_class_value"><code class="docutils literal notranslate"><span class="pre">Interactive.update_class_value()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biaplotter.selectors.Interactive.update_data"><code class="docutils literal notranslate"><span class="pre">Interactive.update_data()</span></code></a></li>
@@ -618,6 +619,14 @@ For parameter and attribute details, see the Selector class documentation.</p>
 <dt class="sig sig-object py" id="biaplotter.selectors.BaseRectangleSelector.data">
 <span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#biaplotter.selectors.BaseRectangleSelector.data" title="Link to this definition">#</a></dt>
 <dd><p>Gets or sets the data from which points will be selected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The data from which points will be selected.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>np.ndarray</p>
+</dd>
+</dl>
 </dd></dl>
 
 <p class="rubric">Attributes Documentation</p>
@@ -730,6 +739,14 @@ For parameter and attribute details, see the Selector class documentation.</p>
 <dt class="sig sig-object py" id="biaplotter.selectors.BaseEllipseSelector.data">
 <span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#biaplotter.selectors.BaseEllipseSelector.data" title="Link to this definition">#</a></dt>
 <dd><p>Gets or sets the data from which points will be selected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The data from which points will be selected.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>np.ndarray</p>
+</dd>
+</dl>
 </dd></dl>
 
 <p class="rubric">Attributes Documentation</p>
@@ -842,6 +859,14 @@ For parameter and attribute details, see the Selector class documentation.</p>
 <dt class="sig sig-object py" id="biaplotter.selectors.BaseLassoSelector.data">
 <span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#biaplotter.selectors.BaseLassoSelector.data" title="Link to this definition">#</a></dt>
 <dd><p>Gets or sets the data from which points will be selected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The data from which points will be selected.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>np.ndarray</p>
+</dd>
+</dl>
 </dd></dl>
 
 <p class="rubric">Attributes Documentation</p>
@@ -908,6 +933,10 @@ To be used as a base class together with a selector to turn selectors interactiv
 </dd>
 </dl>
 <p class="rubric">Notes</p>
+<p><strong>Signals:</strong></p>
+<ul class="simple">
+<li><p><strong>selection_applied_signal</strong> emitted when the <cite>apply_selection</cite> is called. Let’s the canvas widget know that color_indices were updated because of a selection.</p></li>
+</ul>
 <p><strong>Slots:</strong></p>
 <blockquote>
 <div><ul class="simple">
@@ -989,12 +1018,28 @@ To be used as a base class together with a selector to turn selectors interactiv
 <dt class="sig sig-object py" id="biaplotter.selectors.Interactive.active_artist">
 <span class="sig-name descname"><span class="pre">active_artist</span></span><a class="headerlink" href="#biaplotter.selectors.Interactive.active_artist" title="Link to this definition">#</a></dt>
 <dd><p>Gets or sets the active artist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The active artist.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Union[<a class="reference internal" href="artists_api.html#biaplotter.artists.Scatter" title="biaplotter.artists.Scatter">Scatter</a>, <a class="reference internal" href="artists_api.html#biaplotter.artists.Histogram2D" title="biaplotter.artists.Histogram2D">Histogram2D</a>]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="biaplotter.selectors.Interactive.class_value">
 <span class="sig-name descname"><span class="pre">class_value</span></span><a class="headerlink" href="#biaplotter.selectors.Interactive.class_value" title="Link to this definition">#</a></dt>
 <dd><p>Gets or sets the current class value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current class value.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1007,6 +1052,14 @@ To be used as a base class together with a selector to turn selectors interactiv
 <dt class="sig sig-object py" id="biaplotter.selectors.Interactive.selected_indices">
 <span class="sig-name descname"><span class="pre">selected_indices</span></span><a class="headerlink" href="#biaplotter.selectors.Interactive.selected_indices" title="Link to this definition">#</a></dt>
 <dd><p>Gets or sets the indices of the selected points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The indices of the selected points.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>np.ndarray</p>
+</dd>
+</dl>
 </dd></dl>
 
 <p class="rubric">Attributes Documentation</p>
@@ -1044,6 +1097,13 @@ To be used as a base class together with a selector to turn selectors interactiv
 <dt class="sig sig-object py" id="biaplotter.selectors.Interactive.remove">
 <span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#biaplotter.selectors.Interactive.remove" title="Link to this definition">#</a></dt>
 <dd><p>Removes the selector from the canvas and disconnects the button press event.</p>
+</dd></dl>
+
+<p class="rubric">Signals Documentation</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="biaplotter.selectors.Interactive.selection_applied_signal">
+<span class="sig-name descname"><span class="pre">selection_applied_signal</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Signal</span></em><a class="headerlink" href="#biaplotter.selectors.Interactive.selection_applied_signal" title="Link to this definition">#</a></dt>
+<dd><p>Signal emitted when the <cite>apply_selection</cite> is called. Let’s the canvas widget know that color_indices were updated because of a selection.</p>
 </dd></dl>
 
 <p class="rubric">Slots Methods Documentation</p>
@@ -1086,6 +1146,7 @@ To be used as an interactive rectangle selector.</p>
 <li><p><strong>ax</strong> (<em>plt.Axes</em>) – The axes to which the selector will be applied.</p></li>
 <li><p><strong>canvas_widget</strong> (<a class="reference internal" href="plotter_api.html#biaplotter.plotter.CanvasWidget" title="biaplotter.plotter.CanvasWidget"><em>biaplotter.plotter.CanvasWidget</em></a>) – The canvas widget to which the selector will be applied.</p></li>
 <li><p><strong>data</strong> (<em>(</em><em>N</em><em>, </em><em>2</em><em>) </em><em>np.ndarray</em><em>, </em><em>optional</em>) – The data to be selected.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the selector, set to ‘Interactive Rectangle Selector’ by default.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1126,12 +1187,6 @@ To be used as an interactive rectangle selector.</p>
 <li><p><strong>erelease</strong> (<em>MouseEvent</em>) – The release event.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The indices of the selected points.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>np.ndarray</p>
-</dd>
 </dl>
 </dd></dl>
 
@@ -1150,6 +1205,7 @@ To be used as an interactive ellipse selector.</p>
 <li><p><strong>ax</strong> (<em>plt.Axes</em>) – The axes to which the selector will be applied.</p></li>
 <li><p><strong>canvas_widget</strong> (<a class="reference internal" href="plotter_api.html#biaplotter.plotter.CanvasWidget" title="biaplotter.plotter.CanvasWidget"><em>biaplotter.plotter.CanvasWidget</em></a>) – The canvas widget to which the selector will be applied.</p></li>
 <li><p><strong>data</strong> (<em>(</em><em>N</em><em>, </em><em>2</em><em>) </em><em>np.ndarray</em><em>, </em><em>optional</em>) – The data to be selected.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the selector, set to ‘Interactive Ellipse Selector’ by default.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1189,12 +1245,6 @@ To be used as an interactive ellipse selector.</p>
 <li><p><strong>eclick</strong> (<em>MouseEvent</em>) – The press event.</p></li>
 <li><p><strong>erelease</strong> (<em>MouseEvent</em>) – The release event.</p></li>
 </ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The indices of the selected points.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>np.ndarray</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1251,12 +1301,6 @@ To be used as an interactive lasso selector.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>vertices</strong> (<em>np.ndarray</em>) – The vertices of the lasso.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The indices of the selected points.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>np.ndarray</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1365,6 +1409,7 @@ To be used as an interactive lasso selector.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biaplotter.selectors.Interactive.create_selector"><code class="docutils literal notranslate"><span class="pre">Interactive.create_selector()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biaplotter.selectors.Interactive.on_button_press"><code class="docutils literal notranslate"><span class="pre">Interactive.on_button_press()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biaplotter.selectors.Interactive.remove"><code class="docutils literal notranslate"><span class="pre">Interactive.remove()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biaplotter.selectors.Interactive.selection_applied_signal"><code class="docutils literal notranslate"><span class="pre">Interactive.selection_applied_signal</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biaplotter.selectors.Interactive.update_active_artist"><code class="docutils literal notranslate"><span class="pre">Interactive.update_active_artist()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biaplotter.selectors.Interactive.update_class_value"><code class="docutils literal notranslate"><span class="pre">Interactive.update_class_value()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biaplotter.selectors.Interactive.update_data"><code class="docutils literal notranslate"><span class="pre">Interactive.update_data()</span></code></a></li>

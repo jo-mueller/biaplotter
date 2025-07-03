@@ -373,6 +373,8 @@ document.write(`
  | <a href="#S"><strong>S</strong></a>
  | <a href="#U"><strong>U</strong></a>
  | <a href="#V"><strong>V</strong></a>
+ | <a href="#X"><strong>X</strong></a>
+ | <a href="#Y"><strong>Y</strong></a>
  
 </div>
 <h2 id="A">A</h2>
@@ -384,19 +386,21 @@ document.write(`
         <li><a href="selectors_api.html#biaplotter.selectors.Interactive.active_artist">(biaplotter.selectors.Interactive attribute)</a>
 </li>
       </ul></li>
+      <li><a href="plotter_api.html#biaplotter.plotter.CanvasWidget.active_selector">active_selector (biaplotter.plotter.CanvasWidget attribute)</a>
+</li>
       <li><a href="plotter_api.html#biaplotter.plotter.CanvasWidget.add_artist">add_artist() (biaplotter.plotter.CanvasWidget method)</a>
 </li>
       <li><a href="plotter_api.html#biaplotter.plotter.CanvasWidget.add_selector">add_selector() (biaplotter.plotter.CanvasWidget method)</a>
+</li>
+      <li><a href="artists_api.html#biaplotter.artists.Scatter.alpha">alpha (biaplotter.artists.Scatter attribute)</a>
 </li>
       <li><a href="selectors_api.html#biaplotter.selectors.Interactive.apply_selection">apply_selection() (biaplotter.selectors.Interactive method)</a>
 </li>
       <li><a href="artists_api.html#biaplotter.artists.Artist">Artist (class in biaplotter.artists)</a>
 </li>
-      <li><a href="plotter_api.html#biaplotter.plotter.CanvasWidget.artist_changed_signal">artist_changed_signal (biaplotter.plotter.CanvasWidget attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="plotter_api.html#biaplotter.plotter.CanvasWidget.artists">artists (biaplotter.plotter.CanvasWidget attribute)</a>
+      <li><a href="plotter_api.html#biaplotter.plotter.CanvasWidget.artist_changed_signal">artist_changed_signal (biaplotter.plotter.CanvasWidget attribute)</a>
 </li>
       <li><a href="artists_api.html#biaplotter.artists.Artist.ax">ax (biaplotter.artists.Artist attribute)</a>
 
@@ -440,17 +444,9 @@ document.write(`
 </li>
       <li><a href="plotter_api.html#biaplotter.plotter.CanvasWidget">CanvasWidget (class in biaplotter.plotter)</a>
 </li>
-      <li><a href="artists_api.html#biaplotter.artists.Artist.categorical_colormap">categorical_colormap (biaplotter.artists.Artist attribute)</a>
-
-      <ul>
-        <li><a href="artists_api.html#biaplotter.artists.Histogram2D.categorical_colormap">(biaplotter.artists.Histogram2D attribute)</a>
-</li>
-        <li><a href="artists_api.html#biaplotter.artists.Scatter.categorical_colormap">(biaplotter.artists.Scatter attribute)</a>
-</li>
-      </ul></li>
-      <li><a href="plotter_api.html#biaplotter.plotter.CanvasWidget.class_spinbox">class_spinbox (biaplotter.plotter.CanvasWidget attribute)</a>
-</li>
       <li><a href="selectors_api.html#biaplotter.selectors.Interactive.class_value">class_value (biaplotter.selectors.Interactive attribute)</a>
+</li>
+      <li><a href="artists_api.html#biaplotter.artists.Histogram2D.cmin">cmin (biaplotter.artists.Histogram2D attribute)</a>
 </li>
       <li><a href="artists_api.html#biaplotter.artists.Artist.color_indices">color_indices (biaplotter.artists.Artist attribute)</a>
 
@@ -468,6 +464,8 @@ document.write(`
         <li><a href="artists_api.html#biaplotter.artists.Scatter.color_indices_changed_signal">(biaplotter.artists.Scatter attribute)</a>
 </li>
       </ul></li>
+      <li><a href="artists_api.html#biaplotter.artists.Scatter.color_normalization_method">color_normalization_method (biaplotter.artists.Scatter attribute)</a>
+</li>
       <li><a href="selectors_api.html#biaplotter.selectors.BaseEllipseSelector.create_selector">create_selector() (biaplotter.selectors.BaseEllipseSelector method)</a>
 
       <ul>
@@ -528,11 +526,15 @@ document.write(`
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="artists_api.html#biaplotter.artists.Histogram2D.histogram">histogram (biaplotter.artists.Histogram2D attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="artists_api.html#biaplotter.artists.Histogram2D">Histogram2D (class in biaplotter.artists)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="artists_api.html#biaplotter.artists.Histogram2D.histogram_color_normalization_method">histogram_color_normalization_method (biaplotter.artists.Histogram2D attribute)</a>
+</li>
       <li><a href="artists_api.html#biaplotter.artists.Histogram2D.histogram_colormap">histogram_colormap (biaplotter.artists.Histogram2D attribute)</a>
+</li>
+      <li><a href="artists_api.html#biaplotter.artists.Histogram2D.histogram_interpolation">histogram_interpolation (biaplotter.artists.Histogram2D attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -540,7 +542,9 @@ document.write(`
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="artists_api.html#biaplotter.artists.Histogram2D.indices_in_above_threshold_patches">indices_in_above_threshold_patches() (biaplotter.artists.Histogram2D method)</a>
+      <li><a href="artists_api.html#biaplotter.artists.Artist.ids">ids (biaplotter.artists.Artist attribute)</a>
+</li>
+      <li><a href="artists_api.html#biaplotter.artists.Histogram2D.indices_in_patches_above_threshold">indices_in_patches_above_threshold() (biaplotter.artists.Histogram2D method)</a>
 </li>
       <li><a href="selectors_api.html#biaplotter.selectors.Interactive">Interactive (class in biaplotter.selectors)</a>
 </li>
@@ -599,6 +603,28 @@ document.write(`
 </li>
       </ul></li>
   </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="artists_api.html#biaplotter.artists.Histogram2D.overlay_color_normalization_method">overlay_color_normalization_method (biaplotter.artists.Histogram2D attribute)</a>
+</li>
+      <li><a href="artists_api.html#biaplotter.artists.Artist.overlay_colormap">overlay_colormap (biaplotter.artists.Artist attribute)</a>
+
+      <ul>
+        <li><a href="artists_api.html#biaplotter.artists.Histogram2D.overlay_colormap">(biaplotter.artists.Histogram2D attribute)</a>
+</li>
+        <li><a href="artists_api.html#biaplotter.artists.Scatter.overlay_colormap">(biaplotter.artists.Scatter attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="artists_api.html#biaplotter.artists.Histogram2D.overlay_interpolation">overlay_interpolation (biaplotter.artists.Histogram2D attribute)</a>
+</li>
+      <li><a href="artists_api.html#biaplotter.artists.Histogram2D.overlay_opacity">overlay_opacity (biaplotter.artists.Histogram2D attribute)</a>
+</li>
+      <li><a href="artists_api.html#biaplotter.artists.Histogram2D.overlay_visible">overlay_visible (biaplotter.artists.Histogram2D attribute)</a>
+
+      <ul>
+        <li><a href="artists_api.html#biaplotter.artists.Scatter.overlay_visible">(biaplotter.artists.Scatter attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
 </tr></table>
 
 <h2 id="R">R</h2>
@@ -617,6 +643,12 @@ document.write(`
 </li>
       </ul></li>
   </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="plotter_api.html#biaplotter.plotter.CanvasWidget.remove_artist">remove_artist() (biaplotter.plotter.CanvasWidget method)</a>
+</li>
+      <li><a href="plotter_api.html#biaplotter.plotter.CanvasWidget.remove_selector">remove_selector() (biaplotter.plotter.CanvasWidget method)</a>
+</li>
+  </ul></td>
 </tr></table>
 
 <h2 id="S">S</h2>
@@ -626,15 +658,17 @@ document.write(`
 </li>
       <li><a href="selectors_api.html#biaplotter.selectors.Interactive.selected_indices">selected_indices (biaplotter.selectors.Interactive attribute)</a>
 </li>
-      <li><a href="plotter_api.html#biaplotter.plotter.CanvasWidget.selection_toolbar">selection_toolbar (biaplotter.plotter.CanvasWidget attribute)</a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="plotter_api.html#biaplotter.plotter.CanvasWidget.selection_tools_layout">selection_tools_layout (biaplotter.plotter.CanvasWidget attribute)</a>
+      <li><a href="selectors_api.html#biaplotter.selectors.Interactive.selection_applied_signal">selection_applied_signal (biaplotter.selectors.Interactive attribute)</a>
 </li>
       <li><a href="selectors_api.html#biaplotter.selectors.Selector">Selector (class in biaplotter.selectors)</a>
 </li>
-      <li><a href="plotter_api.html#biaplotter.plotter.CanvasWidget.selectors">selectors (biaplotter.plotter.CanvasWidget attribute)</a>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="plotter_api.html#biaplotter.plotter.CanvasWidget.selector_changed_signal">selector_changed_signal (biaplotter.plotter.CanvasWidget attribute)</a>
+</li>
+      <li><a href="plotter_api.html#biaplotter.plotter.CanvasWidget.show_color_overlay">show_color_overlay (biaplotter.plotter.CanvasWidget attribute)</a>
+</li>
+      <li><a href="plotter_api.html#biaplotter.plotter.CanvasWidget.show_color_overlay_signal">show_color_overlay_signal (biaplotter.plotter.CanvasWidget attribute)</a>
 </li>
       <li><a href="artists_api.html#biaplotter.artists.Scatter.size">size (biaplotter.artists.Scatter attribute)</a>
 </li>
@@ -666,6 +700,30 @@ document.write(`
         <li><a href="artists_api.html#biaplotter.artists.Scatter.visible">(biaplotter.artists.Scatter attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="X">X</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="artists_api.html#biaplotter.artists.Artist.x_label_color">x_label_color (biaplotter.artists.Artist attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="artists_api.html#biaplotter.artists.Artist.x_label_text">x_label_text (biaplotter.artists.Artist attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Y">Y</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="artists_api.html#biaplotter.artists.Artist.y_label_color">y_label_color (biaplotter.artists.Artist attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="artists_api.html#biaplotter.artists.Artist.y_label_text">y_label_text (biaplotter.artists.Artist attribute)</a>
+</li>
   </ul></td>
 </tr></table>
 
